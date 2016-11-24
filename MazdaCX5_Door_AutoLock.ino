@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-
 #include <SPI.h>
 #include <mcp_can.h>
-#include <Car.h>
-=======
-#include <SPI.h>
-#include <mcp_can.h>
->>>>>>> origin/master
 
 #define SPI_CS_PIN			10				// pin for CS CAN
 #define CAN_SPEED			CAN_250KBPS		// can speed settings
@@ -87,6 +80,8 @@ void Car :: canProcess(void)
 		};
 
 /////////////////////////////////////////////////////
+Car mazda;
+  
 bool wasOpened = true;  // true if one of the doors was opened
 int lockPin = 5;        // pin 5V to close doors
 
@@ -96,7 +91,7 @@ char msgString[150];
 
 void setup()
 {
-  Car mazda;
+
   pinMode(lockPin, OUTPUT);   
   digitalWrite(lockPin, LOW);  
 }
