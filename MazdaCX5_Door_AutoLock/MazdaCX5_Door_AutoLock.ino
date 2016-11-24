@@ -1,21 +1,21 @@
 #include <SPI.h>
 #include <mcp_can.h>
 
-#define SPI_CS_PIN			10				// pin for CS CAN
-#define CAN_SPEED			CAN_250KBPS		// can speed settings
-#define CAN_FREQ			MCP_16MHZ		// can frequency
+#define SPI_CS_PIN			            10				// pin for CS CAN
+#define CAN_SPEED			              CAN_250KBPS		// can speed settings
+#define CAN_FREQ			              MCP_16MHZ		// can frequency
 
-#define CAN_DOOR_ID			0xA1			// can packet id for doors
-#define CAN_DOOR_BYTE			2
-#define CAN_DOOR_FRONT_LEFT_BIT		4
-#define CAN_DOOR_FRONT_RIGHT_BIT	5
-#define CAN_DOOR_REAR_LEFT_BIT		6
-#define CAN_DOOR_REAR_RIGHT_BIT		7
+#define CAN_DOOR_ID			            0x43E			// can packet id for doors
+#define CAN_DOOR_BYTE			          5
+#define CAN_DOOR_FRONT_LEFT_BIT		  6
+#define CAN_DOOR_FRONT_RIGHT_BIT	  5
+#define CAN_DOOR_REAR_LEFT_BIT		  4
+#define CAN_DOOR_REAR_RIGHT_BIT		  3
 
-#define CAN_SPEED_ID			0xA2			// can packet id for Speed
-#define CAN_SPEED_BYTE			2
-#define CAN_SPEED_BIT_FROM		4
-#define CAN_SPEED_BIT_TO		8
+#define CAN_SPEED_ID			          0x202			// can packet id for Speed
+#define CAN_SPEED_BYTE			        5
+#define CAN_SPEED_BIT_FROM		      1
+#define CAN_SPEED_BIT_TO		        2
 
 class Door{
 	private:
