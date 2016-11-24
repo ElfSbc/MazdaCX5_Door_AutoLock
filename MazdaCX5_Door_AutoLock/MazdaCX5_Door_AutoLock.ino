@@ -17,6 +17,8 @@
 #define CAN_SPEED_BIT_FROM		      1
 #define CAN_SPEED_BIT_TO		        2
 
+#define PIN_TO_LOCK                 13
+
 class Door{
 	private:
 		bool state = false; // closed
@@ -83,7 +85,7 @@ void Car :: canProcess(void)
 Car mazda;
   
 bool wasOpened = true;  // true if one of the doors was opened
-int lockPin = 5;        // pin 5V to close doors
+int lockPin = PIN_TO_LOCK;        // pin 5V to close doors
 
 char msgString[150];
 /////////////////////////////////////////////////////
